@@ -9,5 +9,7 @@
         dest: "/opt/tomcat/webapps/MyWeb.war"
         remote_src: no
     - name: Restart Tomcat
-      shell: /opt/tomcat/bin/shutdown.sh && /opt/tomcat/bin/startup.sh
+      systemd:
+        name: tomcat
+        state: restarted
 
