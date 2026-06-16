@@ -1,6 +1,9 @@
 pipeline {
-  agent 'any'
-  
+  agent any
+  environment {
+  LANG='en_US.UTF-8'
+  LC_ALL='en_US.UTF-8'
+  }
   tools {
    maven 'Maven'
   }
