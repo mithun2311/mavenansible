@@ -1,13 +1,13 @@
 - name: Deploy to Tomcat
-hosts: web
-become: yes
+  hosts: web
+  become: yes
 
-tasks:
- - name: Copy WAR file
- copy:
-  src: "/var/snap/jenkins/5022/workspace/myweb/target/MyWeb.war"
-  dest: "/opt/tomcat/webapps/MyWeb.war"
-  remote_src: no
- - name: Restart Tomcat
-   shell: /opt/tomcat/bin/shutdown.sh && /opt/tocat/bin/startup.sh
+  tasks:
+    - name: Copy WAR file
+      copy:
+        src: "/var/snap/jenkins/5022/workspace/myweb/target/MyWeb.war"
+        dest: "/opt/tomcat/webapps/MyWeb.war"
+        remote_src: no
+    - name: Restart Tomcat
+      shell: /opt/tomcat/bin/shutdown.sh && /opt/tocat/bin/startup.sh
 
