@@ -5,7 +5,7 @@
   tasks:
     - name: Copy WAR file
       copy:
-        src: "/var/snap/jenkins/5022/workspace/myweb/target/MyWeb.war"
+        src: "/var/snap/jenkins/5042/workspace/myweb/target/MyWeb.war"
         dest: "/opt/tomcat/webapps/MyWeb.war"
         remote_src: no
     - name: Restart Tomcat
